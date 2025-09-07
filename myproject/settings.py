@@ -39,8 +39,6 @@ SPECTACULAR_SETTINGS = {
     'DESCRIPTION': 'API documentation for deployed Django app',
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
-    # OTHER SETTINGS (optional)
-    'COMPONENT_SPLIT_REQUEST': True,
 }
 ROOT_URLCONF = 'myproject.urls'
 
@@ -110,4 +108,5 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',  # ← ADD THIS LINE
 }
