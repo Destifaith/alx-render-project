@@ -30,4 +30,5 @@ urlpatterns = [
      # Swagger UI:
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),  # ← NEW
     path('swagger/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),  # ← NEW
+    path('', RedirectView.as_view(url='/swagger/', permanent=False)),
 ]
