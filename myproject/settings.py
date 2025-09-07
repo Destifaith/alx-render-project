@@ -17,7 +17,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'drf_yasg',
+    'drf_spectacular',
     'django_celery_results',
     'myapp',
 ]
@@ -33,6 +33,15 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+# drf-spectacular settings
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'My Django API',
+    'DESCRIPTION': 'API documentation for deployed Django app',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+    # OTHER SETTINGS (optional)
+    'COMPONENT_SPLIT_REQUEST': True,
+}
 ROOT_URLCONF = 'myproject.urls'
 
 TEMPLATES = [
